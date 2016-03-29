@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'bustle',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'http://bustle2.firebaseio.com',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
