@@ -7,7 +7,14 @@ export default Ember.Component.extend({
       this.set('addNewArticle', true);
     },
     saveNewArticle() {
+      var params = {
+        title: this.get('title'),
+        author: this.get('author'),
+        body: this.get('body'),
+        category: this.get('category'),
+      };
       this.set('addNewArticle', false);
+      this.sendAction('saveNewArticle', params);
     }
   }
 });

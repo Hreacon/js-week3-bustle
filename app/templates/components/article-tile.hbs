@@ -5,4 +5,8 @@
     <h4>{{article.category}}</h4>
   {{/link-to}}
   <p>{{article.author}}</p>
+  {{#if admin}}
+    <button {{action 'updateMe' article}}>Update</button>
+    <button {{action 'deleteMe' article}}>Delete</button>
+  {{/if}}
 </div>

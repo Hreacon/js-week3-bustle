@@ -1,0 +1,12 @@
+{{#if article}}
+  <h4>Update {{article.title}}</h4>
+  <div>
+    <form>
+      <label for="title">Title:</label>{{input value=article.title id="title"}}
+      <label for="author">author</label>{{input value=article.author id="author"}}
+      <label for="body">body</label>{{input value=article.body id="body"}}
+      <label for="category">category</label>{{input value=article.category id="category"}}
+      <button {{action 'updateArticle' article}}>Save</button>
+    </form>
+  </div>
+{{/if}}

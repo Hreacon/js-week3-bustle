@@ -1,3 +1,5 @@
-{{#each model as |article|}}
-  {{article-tile article=article}}
-{{/each}}
+<div class="articles">
+  {{#each model as |article|}}
+    {{article-tile article=article admin=admin updateMe="updateMe" deleteMe="deleteMe"}}
+  {{/each}}
+</div>
