@@ -1,0 +1,11 @@
+{{#if addNewArticle}}
+  <form>
+    <label for="title">Title:</label>{{input value=title id="title"}}
+    <label for="author">author</label>{{input value=author id="author"}}
+    <label for="body">body</label>{{input value=body id="body"}}
+    <label for="category">category</label>{{input value=category id="category"}}
+    <button {{action 'saveNewArticle'}}>Save Article</button>
+  </form>
+{{else}}
+  <button {{action 'showForm'}}>Add New Article</button>
+{{/if}}
