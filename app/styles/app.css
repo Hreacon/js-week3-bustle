@@ -55,7 +55,7 @@
 .article a:hover {
   color:gray;
 }
-.articles .ember-view {
+.articles .ember-view .ember-view {
   display:inline-block;
   width:260px;
 }
