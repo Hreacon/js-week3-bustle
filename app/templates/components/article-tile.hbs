@@ -1,8 +1,8 @@
 <div class="article">
-  <a href="#">
+  {{#link-to 'article' article.id}}
     <div class="img"></div>
     <h3>{{article.title}}</h3>
     <h4>{{article.category}}</h4>
-  </a>
+  {{/link-to}}
   <p>{{article.author}}</p>
 </div>
