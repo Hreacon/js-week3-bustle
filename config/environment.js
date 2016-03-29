@@ -4,8 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'bustle',
     environment: environment,
+    firebase: 'https://bustle2.firebaseio.com/',
     baseURL: '/',
-    locationType: 'http://bustle2.firebaseio.com',
+    locationType: 'auto',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -16,6 +17,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-eval' https://*.firebaseio.com",
+      'font-src': "'self'",
+      'connect-src': "'self' wss://*.firebaseio.com",
+      'img-src': "'self' *",
+      'style-src': "'self' 'unsafe-inline'",
+      'frame-src': "'self' https://*.firebaseio.com"
     }
   };
 
